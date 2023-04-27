@@ -69,6 +69,12 @@ variable "worker_type" {
   default     = null
 }
 
+variable "execution_class" {
+  type        = string
+  description = "Indicates whether the job is run with a standard or flexible execution class. The standard execution class is ideal for time-sensitive workloads that require fast job startup and dedicated resources. Valid value: FLEX, STANDARD."
+  default     = "STANDARD"
+}
+
 variable "number_of_workers" {
   type        = number
   description = "The number of workers of a defined `worker_type` that are allocated when a job runs."

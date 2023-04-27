@@ -16,6 +16,7 @@ resource "aws_glue_job" "this" {
   number_of_workers         = var.number_of_workers
   worker_type               = var.worker_type
   max_capacity              = var.max_capacity
+  execution_class           = var.execution_class
   role_arn                  = var.role_arn
   security_configuration    = var.security_configuration
   max_retries               = var.max_retries
